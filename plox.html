@@ -1,0 +1,236 @@
+
+<div class="row">
+  <h1>A not very elegant way to customize the trigger icon</h1>
+</div>
+<div class="row">
+   <div class="medium-6 columns">
+    <p>Add :after element to a wrapper</p>
+    <div class="quesadilla">
+     <input type="datae" class='date enchilada'>
+    </div>
+  </div>
+
+
+</div>
+<div class="row">
+  <h2>Bonus! Types of HTML5 date inputs</h2>
+</div>
+<div class="row">
+  <div class="medium-6 columns">
+    <p>Type Date</p>
+    <input type="date" class='date'>
+  </div>
+  <div class="medium-6 columns">
+    <p>Type Week</p>
+    <input type="week" class='date'>
+  </div>
+  <div class="medium-6 columns">
+    <p>Type Month</p>
+    <input type="month" class='date'>
+  </div>
+  <div class="medium-6 columns">
+    <p>Type time</p>
+    <input type="time" class='date'>
+  </div>
+  <div class="medium-6 columns end">
+    <p>Type datetime-local</p>
+    <input type="datetime-local" class='date'>
+  </div>
+</div>
+<div class="row">
+  <h3>Add :after element with jquery meh..</h3>
+  <div class="medium-6 columns end">
+    <p>After element with query</p>
+    <input type="date" class='date taco'>
+  </div>
+
+    <div class="medium-6 columns">
+    <p>Focus with jquery</p>
+
+    <a id="datepickerfocus" class="button">Focus on datepicker</a>
+    <input name="calendarselect{ContactID}" class="date timeselect" type="date" id="calendar">
+  </div>
+</div>
+<!--
+<style type="text/css">
+  body{
+  //background:GOLDENROD; //*sad trombone*
+}
+
+p{
+  font-size:1.7rem;
+  color:LIGHTSTEELBLUE;
+}
+input.date{
+  border-radius:10px;
+  height:auto;
+  transition:all ease 400ms;
+  box-shadow:0px 0px 1px 1px Violet;
+}
+
+input.date:hover{
+  box-shadow:0px 0px 5px 5px Violet;
+}
+
+/*
+I didm´t find a way to add the :after to a an input element so...
+
+>here is the "solution"
+
+Aplying the after element to a wrapper, and loosing the background of the input and the "calendar-picker-indicator" to opacity:0;
+
+not a very elegant way but ¿hey! I learned something of the different input dates there is.
+
+emojis here
+https://apps.timwhitlock.info/emoji/tables/unicode
+
+It´s Quesadilla and enchilada time!!
+*/
+
+.quesadilla{
+  position:relative;
+}
+.quesadilla:after{
+  z-index:-1;//this unblock the click
+  content:'📅';//your image or whateaver
+  display: block;
+  font-size:2rem;
+  color:STEELBLUE;
+  background: none;
+  //background: url('') no-repeat;
+  //background-size: 10%;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  top:13px;
+  right:-7px;
+}
+
+/*
+>here is the nasty part
+*/
+.enchilada::-webkit-calendar-picker-indicator{
+  opacity:0;//removes awful triangle indicator
+}
+.enchilada, .enchilada:focus{
+  background:rgba(0,0,0,0); //"removes" input background because our icon is behind it 😒 *shake fist*
+}
+
+/*
+>BONUS! types of HTML5 input dates
+*/
+
+::-webkit-datetime-edit {
+  padding: .2em;
+  font-size:2rem;
+}
+
+::-webkit-datetime-edit-fields-wrapper {
+  background: #f0eabd; //the date background
+  border-radius:10px;
+  padding:7px;
+}
+::-webkit-datetime-edit-text {
+  color: silver; padding: 0 0.6em; //the separation dashes
+}
+::-webkit-datetime-edit-day-field {
+  color: DeepPink; //the first digits
+}
+::-webkit-datetime-edit-month-field {
+  color: LimeGreen; //the second digits
+}
+
+::-webkit-datetime-edit-year-field {
+  color: MediumSlateBlue; //the third digits
+}
+::-webkit-inner-spin-button {
+  opacity:1; //shows element
+  font-size:2rem;
+  margin-top:5px;
+  //-webkit-appearance: none; //removes element
+}
+::-webkit-calendar-picker-indicator {
+  background: DarkSlateGray;
+  color:Cornsilk;
+  opacity:1;
+  font-size:1.5rem;
+  transition:all ease 400ms;
+  transform:scale(1);
+  margin-left:5px;
+}
+::-webkit-calendar-picker-indicator:hover{
+  background: Teal;
+  color:Cyan;
+  transform:scale(1.2);
+  cursor:pointer;
+}
+input::-webkit-datetime-edit-year-field[enabled]{
+  font-size:5rem;
+}
+
+/*
+>Datetime
+*/
+
+input::-webkit-datetime-edit{
+  background: PALEVIOLETRED;
+  border-radius:10px;
+}
+input::-webkit-datetime-edit-fields-wrapper{
+  //background: AQUAMARINE;
+}
+
+input::-webkit-datetime-edit-ampm-field{}
+input::-webkit-datetime-edit-day-field{}
+input::-webkit-datetime-edit-hour-field{background: AQUAMARINE;}
+input::-webkit-datetime-edit-millisecond-field{background: AQUAMARINE;}
+input::-webkit-datetime-edit-minute-field{background: AQUAMARINE;}
+input::-webkit-datetime-edit-month-field{}
+input::-webkit-datetime-edit-second-field{}
+input::-webkit-datetime-edit-week-field{background: AQUAMARINE;}
+input::-webkit-datetime-edit-year-field{}
+
+input::-webkit-datetime-edit-text{}
+
+/*
+>Custom image date picker NOT WORKING!!!!!
+*/
+
+/*
+::-webkit-calendar-picker-indicator {
+  position:relative ;
+  color: rgba(0, 0, 0, 0);//alpha hide symbol
+  border-radius:20px;
+  width: 20px;
+  height: 30px;
+}
+
+::-webkit-calendar-picker-indicator::after {
+  content:'lol';
+  display: block;
+  background: Maroon;
+  //background: url('') no-repeat;
+  //background-size: 10%;
+  width: 100px;
+  height: 100px;
+  position: absolute;
+  transform: translateX(-20px);
+  opacity: 1;
+  z-index:9;
+}
+*/
+</style><!-- -->
+<script type="text/javascript">
+   $(function () {
+  $(".taco").after("😈 Im the after element");
+
+   document.getElementById("datepickerfocus").onclick = function(e){
+    document.getElementById("calendar").focus();
+    // You could write code to toggle this
+}
+
+})
+
+
+
+</script> -->

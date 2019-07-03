@@ -1,0 +1,2 @@
+<html lang="ru">
+<div class="" style="width: 100px;height: 100px;background: red"></div>

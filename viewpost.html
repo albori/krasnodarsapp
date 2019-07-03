@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta name="viewport" content="width=device-width,initial-scale=1">
+	<meta charset="UTF-8">
+	<title>Обявления</title>
+	<link rel="stylesheet" type="text/css" href="css/jquery.mobile.custom.structure.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery.mobile.custom.theme.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<link rel="stylesheet" type="text/css" href="css/views.css">
+</head>
+<body>
+	<div class="wrap">
+		<header style="position: static;">
+			<div class="menu">
+				<p id="burger" class="burger">
+					<span></span>
+					<span></span>
+					<span></span>
+				</p>
+				<ul class="menuleft">
+					<p class="burger close">
+						<span></span>
+						<span></span>
+						<span></span>
+					</p>
+					<li><a href="index.html">Главная</a></li>
+					<li><a href="viewpost.html">Просмотр обяъвдение</a></li>
+					<li><a href="addpost.html">Подать обяъвдения</a></li>
+					<li><a href="onas.html">О приложения</a></li>
+					<li><button onclick="exit()" >Выход</button></li>
+				</ul>
+			</div>
+			<div class="logo"><span>Имя Приложения</span></div>
+		</header>
+		<div class="content">
+			<ul id="content" class="ul"></ul>
+			<p style="margin: 20px auto; " id="reload" class="knopka" href="#">Загрузить ещё</>
+		</div>
+		<div style="display:none;" id="rowes"><div></div></div>
+	</div>
+</body>
+<script type="text/javascript" src="js/index.js"></script>
+<script type="text/javascript" src="js/jquery.js"></script>
+<!-- <script type="text/javascript" src="js/jquery.mobile.custom.js"></script> -->
+<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript" src="js/ivew.js"></script>
+<script src="phonegap.js" ></script>
+
+
+</html>

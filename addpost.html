@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+	<meta charset="UTF-8">
+	<title>Добавления</title>
+	<link rel="stylesheet" type="text/css" href="css/jquery.mobile.custom.structure.css">
+	<link rel="stylesheet" type="text/css" href="css/jquery.mobile.custom.theme.css">
+	<link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+
+<body>
+	<div class="wrapper">
+		<header>
+			<div class="menu">
+				<p class="burger">
+					<span></span>
+					<span></span>
+					<span></span>
+				</p>
+				<ul class="menuleft">
+					<p class="burger close">
+						<span></span>
+						<span></span>
+						<span></span>
+					</p>
+					<li><a href="index.html">Главная</a></li>
+					<li><a href="viewpost.html">Просмотр обяъвдение</a></li>
+					<li><a href="addpost.html">Подать обяъвдения</a></li>
+					<li><a href="onas.html">О приложения</a></li>
+					<li><button onclick="exit()" >Выход</button></li>
+				</ul>
+			</div>
+			<div class="logo"><span>Имя Приложения</span></div>
+		</header>
+		<form id="addposter">
+			<input class="inps" id="adreas" type="name" name="name" placeholder="Названия">
+			<input class="inps" id="adreas" type="text" name="adreas" placeholder="Адрес">
+			<input class="inps" type="number" name="kolvopers" placeholder="количество гостей">
+			<div class="flows">
+				<p>дети</p><input style="display:none" class="deti" type="checkbox" name="" id="radio" >
+				<label for="radio" class="bongo"></label>
+			</div>
+			<input  type="number" class="inps childrens" name="kolvo_detey" placeholder="коичество детей">
+			<input type="date" id="priezd" class='inps data' name="priezd" >
+			<input type="date" id="vezd" class='inps data' name="vezd">
+			<input type="text" id="night" class='inps ' name="night" placeholder="Сколько ночей">
+			<input type="tetx" id="vezd" class='inps' name="sumar" placeholder="Желаемая сумма">
+			<input type="tetx"  class='inps' name="doppole"  value="" placeholder="пожелания клиента(не обязательно)">
+			<input type="tetx" id="nameuser" class='inps' name="username" style="display: none;" value="">
+			<input class="submit" id="addpost" type="submit" name="" value="О Т П Р А В И Т Ь">
+		</form>
+	</div>
+</body>
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/jquery.mobile.custom.js"></script>
+<script type="text/javascript" src="js/script.js"></script>
+<script type="text/javascript">
+
+var data;
+function grow(e) {
+	print("form");
+}
+data = new Date();
+		var a = document.getElementById("priezd");
+		var b = document.getElementById('vezd');
+	function gred(e) {
+		console.log(a.value);
+		console.log(b.value);
+	}
+	function blow(e) {
+		// body...
+		if (a.value > b.value || a < data) {
+			console.log('error');
+		}
+	}
+</script>
+<script src="phonegap.js" ></script>
+</html>
